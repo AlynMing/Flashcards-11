@@ -75,6 +75,17 @@
                                     <outletCollection property="gestureRecognizers" destination="M8j-Hv-Kug" appends="YES" id="bg2-Bv-1mv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9N-TM-CFl">
+                                <rect key="frame" x="192" y="768" width="30" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lAY-Aw-MdI" kind="presentation" id="pSR-3s-K15"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -111,6 +122,66 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="SLY-7j-YLw">
+            <objects>
+                <viewController id="sDU-DX-82E" customClass="CreationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvX-78-p9K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-Ac-9TA">
+                                <rect key="frame" x="57" y="304" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fac-yh-XCI">
+                                <rect key="frame" x="57" y="431" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fac-yh-XCI" firstAttribute="top" secondItem="f4j-Ac-9TA" secondAttribute="bottom" constant="93" id="0dM-D5-4FM"/>
+                            <constraint firstItem="IQu-lk-X40" firstAttribute="bottom" secondItem="fac-yh-XCI" secondAttribute="bottom" constant="343" id="BYV-eL-uI0"/>
+                            <constraint firstItem="f4j-Ac-9TA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fac-yh-XCI" secondAttribute="trailing" id="Obe-1h-opI"/>
+                            <constraint firstItem="fac-yh-XCI" firstAttribute="centerX" secondItem="dvX-78-p9K" secondAttribute="centerX" id="Q2g-Qz-bm2"/>
+                            <constraint firstItem="f4j-Ac-9TA" firstAttribute="leading" secondItem="IQu-lk-X40" secondAttribute="leading" constant="57" id="Wv9-Gu-sVA"/>
+                            <constraint firstItem="f4j-Ac-9TA" firstAttribute="leading" secondItem="fac-yh-XCI" secondAttribute="leading" id="X3t-8b-08N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IQu-lk-X40"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0IO-Wv-KJG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="pIA-0C-jHG">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="sDU-DX-82E" id="GWg-0v-56C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0t-vT-jhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734.7826086956525" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="325-VM-Eb5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lAY-Aw-MdI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xza-Z0-Yg2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sDU-DX-82E" kind="relationship" relationship="rootViewController" id="hDv-RV-Y8u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1Z-4p-dfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826.0869565217392" y="113.83928571428571"/>
         </scene>
     </scenes>
 </document>

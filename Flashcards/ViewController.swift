@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         buttonThree.layer.borderWidth = 3.0;
         buttonThree.layer.borderColor = #colorLiteral(red: 0.4288981259, green: 0.8103226423, blue: 0.9652158618, alpha: 1);
     }
+    
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         if(frontLabel.isHidden == true) {
