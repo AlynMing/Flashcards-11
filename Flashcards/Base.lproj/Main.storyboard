@@ -35,6 +35,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK0-AE-b77">
+                                        <rect key="frame" x="257" y="173" width="31" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="lAY-Aw-MdI" kind="show" identifier="EditSegue" id="I1l-sU-d61"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -83,7 +92,7 @@
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lAY-Aw-MdI" kind="presentation" id="pSR-3s-K15"/>
+                                    <segue destination="lAY-Aw-MdI" kind="show" id="a4l-Mw-e6c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,7 +135,7 @@
         <!--Creation View Controller-->
         <scene sceneID="SLY-7j-YLw">
             <objects>
-                <viewController id="sDU-DX-82E" customClass="CreationViewController" sceneMemberID="viewController">
+                <viewController id="sDU-DX-82E" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvX-78-p9K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,8 +145,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fac-yh-XCI">
-                                <rect key="frame" x="57" y="431" width="300" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQu-C6-MN2">
+                                <rect key="frame" x="57" y="533" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23c-1y-zZg">
+                                <rect key="frame" x="65" y="654" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fac-yh-XCI">
+                                <rect key="frame" x="57" y="424" width="300" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -159,7 +180,18 @@
                                 <action selector="didTapOnCancel:" destination="sDU-DX-82E" id="GWg-0v-56C"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="30p-9r-Kon">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="sDU-DX-82E" id="jT2-RU-BTh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="fac-yh-XCI" id="3S2-og-LMb"/>
+                        <outlet property="extraAnswerOne" destination="QQu-C6-MN2" id="sS1-ln-M0B"/>
+                        <outlet property="extraAnswerTwo" destination="23c-1y-zZg" id="Uw5-W9-Wwl"/>
+                        <outlet property="questionTextField" destination="f4j-Ac-9TA" id="S7N-LB-Nu8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0t-vT-jhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +202,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lAY-Aw-MdI" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WCK-N5-mnd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xza-Z0-Yg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -184,4 +217,7 @@
             <point key="canvasLocation" x="1826.0869565217392" y="113.83928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I1l-sU-d61"/>
+    </inferredMetricsTieBreakers>
 </document>
