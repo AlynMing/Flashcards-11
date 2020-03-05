@@ -1,5 +1,26 @@
 ## FLASHCARDS
 
+## Lab 2
+
+### App Description
+Application now allows editing of flashcards and buttons through multiple screens
+
+### App Walk-though
+
+<img src="https://recordit.co/3ZqFZoHLaL" width=200><br>
+
+`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+
+## Required
+- [X] User can open the creation screen
+- [X] User can cancel out of the creation screen
+- [X] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [X] Push code to GitHub
+## Optional
+- [X] User gets an error if they try to create a new flashcard with no question or answer
+- [X] User can edit existing flashcard
+- [X] User can add multiple choice answers in the creation screen
+
 ## Lab 1
 
 ### App Description
@@ -8,11 +29,6 @@ Allows the user to toggle back and forth through the flashcard, while simultaneo
 ### App Walk-though
 
 <img src="http://g.recordit.co/qd0unMdG4y.gif" width=200><br>
-
-<<<<<<< HEAD
-=======
-In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
->>>>>>> Updated code with error
 
 ## Required
 - [x] Create New Project in Xcode
