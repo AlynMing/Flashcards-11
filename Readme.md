@@ -23,7 +23,7 @@ Allows user to save, edit, add and delete multiple flashcards
 ### App Description
 Application now allows editing of flashcards and buttons through multiple screens
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/KEdMMVrnWr.gif" width=200><br>
 
@@ -43,7 +43,7 @@ Application now allows editing of flashcards and buttons through multiple screen
 ### App Description
 Allows the user to toggle back and forth through the flashcard, while simultaneously clicking the button to discover the correct answer.
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/qd0unMdG4y.gif" width=200><br>
 
