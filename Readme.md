@@ -5,7 +5,7 @@
 ### App Description
 Allows user to save, edit, add and delete multiple flashcards 
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/muTyhQuuYg.gif" width=200><br>
 
