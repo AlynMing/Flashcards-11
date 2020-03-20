@@ -11,6 +11,8 @@ import UIKit
 struct Flashcard {
     var question: String
     var answer: String
+    var extraAnswerOne: String
+    var extraAnswerTwo: String
 }
 
 class ViewController: UIViewController {
@@ -55,7 +57,7 @@ class ViewController: UIViewController {
         
         //Adding our intial flashcard if needed
         if flashcards.count == 0 {
-            updateFlashcard(question: "What is the capital of New Mexico?", answer: "Santa Fe", extraAnswerOne: "Albuquerque", extraAnswerTwo: "Farmington", isExisting: true)
+            updateFlashcard(question: "What is the capital of New Mexico?", answer: "Santa Fe", extraAnswerOne: "Albuquerque", extraAnswerTwo: "Farmington", isExisting: false)
         } else {
             updateLabels()
             updateNextPrevButtons()
@@ -70,16 +72,13 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?, isExisting: Bool) {
-        let flashcard = Flashcard(question: question, answer: answer)
-        
-        //Adding flashcard in the flashcards array
-        flashcards.append(flashcard)
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String, extraAnswerTwo: String, isExisting: Bool) {
+        let flashcard = Flashcard(question: question, answer: answer, extraAnswerOne: extraAnswerOne, extraAnswerTwo: extraAnswerTwo)
         
         if isExisting {
-            
             //Replace existing flashcard
             flashcards[currentIndex] = flashcard
+            
         } else {
             
             //Adding flashcard i nthe flashcards array
@@ -131,6 +130,11 @@ class ViewController: UIViewController {
         //Update label
         frontLabel.text = currentFlashcard.question
         backLabel.text = currentFlashcard.answer
+        
+        //Update Buttons
+        buttonOne.setTitle(currentFlashcard.extraAnswerOne, for: .normal)
+        buttonTwo.setTitle(currentFlashcard.answer, for: .normal)
+        buttonThree.setTitle(currentFlashcard.extraAnswerTwo, for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -215,7 +219,7 @@ class ViewController: UIViewController {
         
         //From flashcard array to dictionary array
         let dictionaryArray = flashcards.map { (card) -> [String: String] in
-            return ["question": card.question, "answer": card.answer]
+            return ["question": card.question, "answer": card.answer, "extraAnswerOne": card.extraAnswerOne, "extraAnswerTwo": card.extraAnswerTwo]
         }
         
         //Save array on disk using UserDefaults
@@ -231,7 +235,7 @@ class ViewController: UIViewController {
             
             //In here we know for sure we have a dictionary array
             let savedCards = dictionaryArray.map { dictionary -> Flashcard in
-                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!, extraAnswerOne: dictionary["extraAnswerOne"]!, extraAnswerTwo: dictionary["extraAnswerTwo"]!)
             }
             
             //Put all these cards in our flashcards array
