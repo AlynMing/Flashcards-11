@@ -5,7 +5,7 @@
 ### App Description
 Added Animations and styling to the application
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/azjjnOLEEe.gif" width=200><br>
 
