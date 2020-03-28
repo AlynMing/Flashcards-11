@@ -3,10 +3,11 @@
 ## Lab 3
 
 ### App Description
-`Allows user to save, add and delete multiple flashcards
+Allows user to save, edit, add and delete multiple flashcards 
 
-### App Walk-though
-<img src="https://recordit.co/0ZmWmJEKrV" width=200><br>
+### App Walk-through
+
+<img src="http://g.recordit.co/muTyhQuuYg.gif" width=200><br>
 
 ## Required
 - [X] User can browse through multiple flashcards
@@ -15,14 +16,14 @@
 ## Optional
 - [X] User can delete a flashcard
 - [X] User can edit existing flashcard
-- [ ] User can store multiple choice questions
+- [X] User can store multiple choice questions
 
 ## Lab 2
 
 ### App Description
 Application now allows editing of flashcards and buttons through multiple screens
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/KEdMMVrnWr.gif" width=200><br>
 
@@ -42,7 +43,7 @@ Application now allows editing of flashcards and buttons through multiple screen
 ### App Description
 Allows the user to toggle back and forth through the flashcard, while simultaneously clicking the button to discover the correct answer.
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/qd0unMdG4y.gif" width=200><br>
 
