@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonThree: UIButton!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    var correctAnswerButton: UIButton!
     
     //Array to hold our flashcards
     var flashcards = [Flashcard]()
@@ -63,6 +64,20 @@ class ViewController: UIViewController {
             updateNextPrevButtons()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          
+          //First start with the flashcard invisible and slightly smaller in size
+          card.alpha = 0.0
+          card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+          
+          //Animation
+          UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+              self.card.alpha = 1.0
+              self.card.transform = CGAffineTransform.identity
+          })
+      }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
        flipFlashcard()
@@ -170,9 +185,19 @@ class ViewController: UIViewController {
         backLabel.text = currentFlashcard.answer
         
         //Update Buttons
-        buttonOne.setTitle(currentFlashcard.extraAnswerOne, for: .normal)
-        buttonTwo.setTitle(currentFlashcard.answer, for: .normal)
-        buttonThree.setTitle(currentFlashcard.extraAnswerTwo, for: .normal)
+        let buttons = [buttonOne, buttonTwo, buttonThree].shuffled()
+        let answers = [currentFlashcard.answer, currentFlashcard.extraAnswerOne, currentFlashcard.extraAnswerTwo].shuffled()
+        
+        //Iterate over both arrays at the same time
+        for(button, answer) in zip(buttons, answers) {
+            //Set the title of this random button, with a random answer
+            button?.setTitle(answer, for: .normal)
+            
+            //If this is the correct answer save the button
+            if answer == currentFlashcard.answer {
+                correctAnswerButton = button
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -186,15 +211,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapButtonOne(_ sender: Any) {
-        buttonOne.isHidden = true;
+        if buttonOne == correctAnswerButton {
+            flipFlashcard()
+        } else {
+            frontLabel.isHidden = false
+            buttonOne.isEnabled = false
+        }
     }
     
     @IBAction func didTapButtonTwo(_ sender: Any) {
-        frontLabel.isHidden = true;
+        if buttonTwo == correctAnswerButton {
+            flipFlashcard()
+        } else {
+            frontLabel.isHidden = false
+            buttonTwo.isEnabled = false
+        }
     }
     
     @IBAction func didTapButtonThree(_ sender: Any) {
-        buttonThree.isHidden = true;
+        if buttonThree == correctAnswerButton{
+            flipFlashcard()
+        } else {
+            frontLabel.isHidden = false
+            buttonThree.isEnabled = false
+        }
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {

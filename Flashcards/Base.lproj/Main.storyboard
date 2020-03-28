@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zss-dt-JHt">
                                 <rect key="frame" x="59" y="266" width="296" height="219"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Santa Fe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09P-Fe-YTf">
                                         <rect key="frame" x="0.0" y="0.0" width="296" height="219"/>
@@ -62,7 +62,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grb-c1-bhH">
                                 <rect key="frame" x="93" y="536" width="229" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Albuquerque">
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -73,7 +73,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy0-v6-NO0">
                                 <rect key="frame" x="93" y="616" width="229" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Santa Fe">
                                     <color key="titleColor" red="0.52025103569999998" green="0.79727965590000005" blue="0.94512099029999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -84,7 +84,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA7-AU-WQx">
                                 <rect key="frame" x="93" y="692" width="229" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Farmington">
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -95,7 +95,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9N-TM-CFl">
                                 <rect key="frame" x="175" y="768" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="addButton">
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -105,7 +105,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-A6-YCq">
                                 <rect key="frame" x="330" y="768" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="arrowRight">
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -118,7 +118,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdB-0h-C6q">
                                 <rect key="frame" x="20" y="768" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="arrowLeft">
                                     <color key="titleColor" red="0.52415543789999997" green="0.80120235679999996" blue="0.94904249910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -253,6 +253,9 @@
             <point key="canvasLocation" x="1826.0869565217392" y="113.83928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I1l-sU-d61"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="addButton" width="64" height="64"/>
         <image name="arrowLeft" width="64" height="64"/>
@@ -260,7 +263,4 @@
         <image name="arrowRight" width="64" height="64"/>
         <image name="arrowRightDisabled" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="I1l-sU-d61"/>
-    </inferredMetricsTieBreakers>
 </document>
