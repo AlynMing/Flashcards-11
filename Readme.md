@@ -3,7 +3,7 @@
 ## Lab 4
 
 ### App Description
-`TODO://` Added Animations and styling to the application
+Added Animations and styling to the application
 
 ### App Walk-though
 
