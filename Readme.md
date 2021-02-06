@@ -1,43 +1,6 @@
 ## FLASHCARDS
 
-## Lab 4
 
-### App Description
-Added Animations and styling to the application
-
-### App Walk-through
-
-<img src="http://g.recordit.co/azjjnOLEEe.gif" width=200><br>
-
-## Required
-- [X] User should see the app icon 
-- [X] User should see a splash screen
-- [X] User should see an flip animation when revealing the answer
-- [X] User should see a slide animation when going to the next flashcard
-- [X] User should see a slide animation when going to the previous flashcard
-- [X] Push code to GitHub
-## Optional
-- [X] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
-- [ ] User should see all views properly layout when using the app on a phone of different sizes
-- [X] Correct answer in multiple choice should be random
-
-## Lab 3
-
-### App Description
-Allows user to save, edit, add and delete multiple flashcards 
-
-### App Walk-through
-
-<img src="http://g.recordit.co/muTyhQuuYg.gif" width=200><br>
-
-## Required
-- [X] User can browse through multiple flashcards
-- [X] User can re-open the app and see previously created flashcards
-- [X] Push code to GitHub
-## Optional
-- [X] User can delete a flashcard
-- [X] User can edit existing flashcard
-- [X] User can store multiple choice questions
 
 ## Lab 2
 
@@ -58,23 +21,3 @@ Application now allows editing of flashcards and buttons through multiple screen
 - [X] User can edit existing flashcard
 - [X] User can add multiple choice answers in the creation screen
 
-
-## Lab 1
-
-### App Description
-Allows the user to toggle back and forth through the flashcard, while simultaneously clicking the button to discover the correct answer.
-
-### App Walk-through
-
-<img src="http://g.recordit.co/qd0unMdG4y.gif" width=200><br>
-
-## Required
-- [x] Create New Project in Xcode
-- [x] Add a view for the front side of the flashcard to display the question
-- [x] Add a view for the back side of the flashcard to display the answer
-- [x] Build in logic to show the answer side when the card is tapped
-- [x] Push code to GitHub
-## Optional
-- [x] Toggle the flashcard between the question side and the answer side
-- [x] Style the question and answer side of the card to better distinguish between the two sides
-- [x] Add selectable multiple choice answers beneath the card
